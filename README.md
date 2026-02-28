@@ -3,18 +3,18 @@
 <p>
 <b>DSC 259R Final Project
 
-### Introduction
+<h2>Introduction</h2>
 
-### Data Cleaning and Exploratory Data Analysis
+<h2>Data Cleaning and Exploratory Data Analysis</h2>
 
-### Assessment of Missingness
+<h2>Assessment of Missingness</h2>
 
-### Hypothesis Testing
+<h2>Hypothesis Testing</h2>
 
-### Framing a Prediction Problem
+<h2>Framing a Prediction Problem</h2>
 
-### Baseline Model
+<h2>Baseline Model</h2>
 
-### Final Model
+<h2>Final Model</h2>
 
-### Fairness Analysis
+<h2>Fairness Analysis</h2>
