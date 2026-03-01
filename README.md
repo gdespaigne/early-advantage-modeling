@@ -14,18 +14,15 @@ Understanding this relationship matters for several reasons. From a competitive 
 The dataset contains **24,830 team-level observations**, where each row represents one team in a single match.
 
 
+
 ### Relevant Columns
 
-<div style="background-color:#f5f5f5; padding:15px; border-radius:8px;">
-
-- **`result`** — Binary indicator of match outcome (1 = win, 0 = loss).  
-- **`early_objective_control`** — Indicates whether a team secured at least one early neutral objective (first dragon, herald, or first tower).  
-- **`firstblood`** — Indicates whether a team secured the first kill.  
-- **`golddiffat10`** — Gold difference at 10 minutes.  
-- **`killsat10`** — Kills secured at 10 minutes.  
-- **`side`** — Blue or Red side.
-
-</div>
+> - **`result`** — Binary indicator of match outcome (1 = win, 0 = loss).  
+> - **`early_objective_control`** — Indicates whether a team secured at least one early neutral objective (first dragon, herald, or first tower).  
+> - **`firstblood`** — Indicates whether a team secured the first kill.  
+> - **`golddiffat10`** — Gold difference at 10 minutes.  
+> - **`killsat10`** — Kills secured at 10 minutes.  
+> - **`side`** — Blue or Red side.
 
 <h2>Data Cleaning and Exploratory Data Analysis</h2>
 
