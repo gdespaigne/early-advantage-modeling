@@ -13,8 +13,6 @@ Understanding this relationship matters for several reasons. From a competitive 
 
 The dataset contains **24,830 team-level observations**, where each row represents one team in a single match.
 
-
-
 ### Relevant Columns
 
 > - **`result`** — Binary indicator of match outcome (1 = win, 0 = loss).  
