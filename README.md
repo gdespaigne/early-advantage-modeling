@@ -183,4 +183,54 @@ The permutation test examines whether the missingness of void_grubs depends on t
 
 <h2>Final Model</h2>
 
-<h2>Fairness Analysis</h2>
+## Fairness Analysis (Final Model)
+
+### Groups and Metric
+
+To evaluate whether the final model performs differently across match contexts, I compared predictive performance across two groups defined by early-game macro outcomes:
+
+- **Group X:** Teams that **secured early objective control** (`early_objective_control = 1`)
+- **Group Y:** Teams that **did not secure early objective control** (`early_objective_control = 0`)
+
+The evaluation metric used was **test accuracy**, since the prediction task is binary (win vs loss).
+
+---
+
+### Hypotheses, Test Statistic, and Significance Level
+
+- **Null Hypothesis (H₀):** The model is fair with respect to early objective control. Any difference in test accuracy between Group X and Group Y is due to random chance.
+- **Alternative Hypothesis (H₁):** The model is not fair with respect to early objective control. The model’s test accuracy differs between Group X and Group Y.
+
+- **Test statistic:** Difference in test accuracy  
+  \[
+  \text{Accuracy(Group X)} - \text{Accuracy(Group Y)}
+  \]
+- **Significance level:** \(\alpha = 0.05\)
+
+A **permutation test** was performed by randomly shuffling group labels (X/Y) while keeping the model predictions fixed, then recomputing the accuracy difference to form an empirical null distribution.
+
+---
+
+### Results
+
+<iframe
+  src="assets/fairness_permutation.html"
+  width="900"
+  height="600"
+  frameborder="0"
+></iframe>
+
+| Metric | Value |
+|---|---:|
+| Accuracy (Early objective secured) | 0.680 |
+| Accuracy (No early objective) | 0.659 |
+| Observed accuracy difference (Secured − Not) | 0.0215 |
+| Difference (percentage points) | 2.15 pp |
+| Permutation test p-value | 0.0865 |
+| Decision (α = 0.05) | Fail to reject H₀ |
+
+The model achieves slightly higher accuracy when early objectives are secured (0.680) compared to when they are not (0.659), producing an observed difference of 0.0215.
+
+**Conclusion:** The model achieves slightly higher accuracy in matches where early objectives are secured; however, the permutation test yields a p-value of 0.0865, indicating that this difference is not statistically significant at the 0.05 level. Overall, the results suggest that the model’s predictive performance remains relatively consistent across these early-game conditions.
+
+---
