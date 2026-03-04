@@ -74,7 +74,7 @@ The following table shows the first few rows of the cleaned dataset used in the 
 ## Univariate Analysis
 <div style="display:flex; justify-content:center;">
 <iframe
-  src="plots/win_distribution.png"
+  src="assets/win_distribution.html"
   width="1000"
   height="600"
   frameborder="0"
@@ -87,7 +87,7 @@ This visualization shows the distribution of match outcomes across the dataset. 
 ## Bivariate Analysis
 <div style="display:flex; justify-content:center;">
 <iframe
-  src="plots/earlyadvcompar.png"
+  src="assets/earlyadvcompar.html"
   width="1000"
   height="600"
   frameborder="0"
@@ -101,6 +101,9 @@ This plot shows the relationship between **early objective control** and match o
 ## Grouped Analysis
 
 The following grouped table summarizes win rates based on early objective control.
+
+<details>
+<summary>Click to expand the dataset preview</summary>
 
 |   patch |        0 |        1 |
 |--------:|---------:|---------:|
@@ -126,6 +129,8 @@ The following grouped table summarizes win rates based on early objective contro
 |   12.2  | 0.290323 | 0.542763 |
 |   12.21 | 0.225806 | 0.550296 |
 |   12.23 | 0.5      | 0.5      |
+
+</details>
 
 This grouped summary reinforces the trend observed in the visualization. Teams that secure early objectives win a substantially larger proportion of matches compared to teams that do not, suggesting that early objective control may be an important indicator of overall match success.
 
