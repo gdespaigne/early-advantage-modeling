@@ -72,27 +72,25 @@ The following table shows the first few rows of the cleaned dataset used in the 
 ---
 
 ## Univariate Analysis
-<div style="display:flex; justify-content:center;">
 <iframe
   src="assets/win_distribution.html"
   width="1000"
   height="600"
   frameborder="0"
 ></iframe>
-</div>
+
 This visualization shows the distribution of match outcomes across the dataset. Since each match contributes one win and one loss at the team level, the distribution is balanced between the two classes. This balance is beneficial for predictive modeling because it prevents classification bias toward one outcome.
 
 ---
 
 ## Bivariate Analysis
-<div style="display:flex; justify-content:center;">
 <iframe
-  src="assets/earlyadvcompar.html"
+  src="assets/objective_winrate.html"
   width="1000"
   height="600"
   frameborder="0"
 ></iframe>
-</div>
+
 
 This plot shows the relationship between **early objective control** and match outcomes. Teams that secure early objectives display a noticeably higher win rate compared to teams that do not. This suggests that early macro advantages may play a meaningful role in determining match outcomes.
 
@@ -167,14 +165,12 @@ These results reinforce the conclusion that the missingness is tied to the **gam
 
 ### Visualization of Missingness
 
-<div style="display:flex; justify-content:center;">
 <iframe
   src="assets/missingness_permutation.html"
   width="1000"
   height="600"
   frameborder="0"
 ></iframe>
-</div>
 
 The permutation test examines whether the missingness of void_grubs depends on team side (Blue vs Red). Since the observed difference falls well within the permutation distribution, there is no evidence that missingness is related to team side. This supports the conclusion that missing values are instead caused by structural changes in the game, specifically the patch that introduced void grubs.
 
