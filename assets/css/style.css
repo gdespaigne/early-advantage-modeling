@@ -1,0 +1,21 @@
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .plot-container {
+    display: flex;
+    justify-content: center;
+  }
