@@ -75,8 +75,8 @@ The following table shows the first few rows of the cleaned dataset used in the 
 
 <iframe
   src="plots/win_distribution.png"
-  width="800"
-  height="450"
+  width="auto"
+  height="600"
   frameborder="0"
 ></iframe>
 
@@ -88,8 +88,8 @@ This visualization shows the distribution of match outcomes across the dataset. 
 
 <iframe
   src="plots/earlyadvcompar.png"
-  width="800"
-  height="450"
+  width="auto"
+  height="600"
   frameborder="0"
 ></iframe>
 
@@ -100,6 +100,8 @@ This plot shows the relationship between **early objective control** and match o
 ## Grouped Analysis
 
 The following grouped table summarizes win rates based on early objective control.
+
+<div style="display:flex; justify-content:center;">
 
 |   patch |        0 |        1 |
 |--------:|---------:|---------:|
@@ -125,6 +127,8 @@ The following grouped table summarizes win rates based on early objective contro
 |   12.2  | 0.290323 | 0.542763 |
 |   12.21 | 0.225806 | 0.550296 |
 |   12.23 | 0.5      | 0.5      |
+
+</div>
 
 This grouped summary reinforces the trend observed in the visualization. Teams that secure early objectives win a substantially larger proportion of matches compared to teams that do not, suggesting that early objective control may be an important indicator of overall match success.
 
@@ -162,9 +166,9 @@ These results reinforce the conclusion that the missingness is tied to the **gam
 ### Visualization of Missingness
 
 <iframe
-  src="assets/missingness_distribution.html"
-  width="850"
-  height="500"
+  src="assets/missingness_permutation.html"
+  width="auto"
+  height="600"
   frameborder="0"
 ></iframe>
 
