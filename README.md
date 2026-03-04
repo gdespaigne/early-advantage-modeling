@@ -213,13 +213,6 @@ A **permutation test** was performed by randomly shuffling group labels (X/Y) wh
 
 ### Results
 
-<iframe
-  src="assets/fairness_permutation.html"
-  width="900"
-  height="600"
-  frameborder="0"
-></iframe>
-
 | Metric | Value |
 |---|---:|
 | Accuracy (Early objective secured) | 0.680 |
@@ -232,5 +225,12 @@ A **permutation test** was performed by randomly shuffling group labels (X/Y) wh
 The model achieves slightly higher accuracy when early objectives are secured (0.680) compared to when they are not (0.659), producing an observed difference of 0.0215.
 
 **Conclusion:** The model achieves slightly higher accuracy in matches where early objectives are secured; however, the permutation test yields a p-value of 0.0865, indicating that this difference is not statistically significant at the 0.05 level. Overall, the results suggest that the model’s predictive performance remains relatively consistent across these early-game conditions.
+
+<iframe
+  src="assets/fairness_permutation.html"
+  width="900"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ---
