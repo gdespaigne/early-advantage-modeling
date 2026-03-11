@@ -1,3 +1,4 @@
+# Predicting Early Match Success in League of Legends
 **Project by:** Gabrielle Despaigne |
 **DSC 259R** Final Project
 
@@ -9,7 +10,6 @@ This project analyzes professional *League of Legends* match data from the 2022 
 
 Understanding this relationship matters for several reasons. From a competitive standpoint, it informs strategic decision-making: should teams prioritize early neutral objectives such as dragons and heralds, or early combat advantages like first blood? From a data science perspective, this dataset provides a structured environment to evaluate how early signals translate into final outcomes, and whether magnitude-based metrics (such as gold difference) provide more predictive power than binary early events alone.
 
-
 The dataset contains **24,830 team-level observations**, where each row represents one team in a single match.
 
 ### Relevant Columns
@@ -20,6 +20,8 @@ The dataset contains **24,830 team-level observations**, where each row represen
 > - **`golddiffat10`** — Gold difference at 10 minutes.  
 > - **`killsat10`** — Kills secured at 10 minutes.  
 > - **`side`** — Blue or Red side.
+
+---
 
 ## Data Cleaning and Exploratory Data Analysis
 
@@ -50,9 +52,10 @@ After cleaning and feature engineering, the dataset contains **24,830 rows**, wh
 
 The following table shows the first few rows of the cleaned dataset used in the analysis.
 
+<div style="display:flex; justify-content:center;">
 
-|   result | side   |   firstblood |   firstdragon |   firstherald |   firsttower |   void_grubs |   early_obj_cntrl |   golddiffat10 |   killsat10 |
-|---------:|:-------|-------------:|--------------:|--------------:|-------------:|-------------:|------------------:|---------------:|------------:|
+|  result | side   |   firstblood |   firstdragon |   firstherald |   firsttower |   void_grubs |   early_obj_cntrl |   golddiffat10 |   killsat10 |
+|--------:|:-------|-------------:|--------------:|--------------:|-------------:|-------------:|------------------:|---------------:|------------:|
 |        0 | Blue   |            1 |             0 |             1 |            1 |          nan |                         1 |           1523 |           3 |
 |        1 | Red    |            0 |             1 |             0 |            0 |          nan |                         1 |          -1523 |           0 |
 |        0 | Blue   |            0 |             0 |             1 |            0 |          nan |                         1 |          -1619 |           1 |
@@ -64,6 +67,7 @@ The following table shows the first few rows of the cleaned dataset used in the 
 |        1 | Blue   |            1 |             0 |             0 |            1 |            0 |                         1 |            nan |         nan |
 |        0 | Red    |            0 |             1 |             0 |            0 |            0 |                         1 |            nan |         nan |
 
+</div>
 
 ---
 
@@ -98,8 +102,8 @@ This plot shows the relationship between **early objective control** and match o
 The following grouped table summarizes win rates based on early objective control.
 
 
-|   patch |        0 |        1 |
-|--------:|---------:|---------:|
+|  patch |       0 |       1 |
+|-------:|--------:|--------:|
 |   12.01 | 0.236559 | 0.558566 |
 |   12.02 | 0.363328 | 0.559322 |
 |   12.03 | 0.246429 | 0.550141 |
@@ -126,6 +130,7 @@ The following grouped table summarizes win rates based on early objective contro
 
 This grouped summary reinforces the trend observed in the visualization. Teams that secure early objectives win a substantially larger proportion of matches compared to teams that do not, suggesting that early objective control may be an important indicator of overall match success.
 
+---
 
 ## Missingness Analysis
 
@@ -239,6 +244,8 @@ To evaluate model performance, I used two metrics:
 - **ROC-AUC**, which evaluates how well the model distinguishes between winning and losing teams across all possible classification thresholds.
 
 ROC-AUC was included because accuracy alone can be misleading for classification problems that depend on a decision threshold. ROC-AUC instead evaluates the model’s ability to rank winning teams above losing teams, providing a more complete measure of predictive performance.
+
+---
 
 ## Baseline Model
 
