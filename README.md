@@ -1,4 +1,5 @@
-## Predicting Early Match Success in League of Legends
+# Early-Game Advantage and Match Outcomes in League of Legends
+## A Project Exploring the Data Lifestyle Through Video Game Analytics
 **Project by:** Gabrielle Despaigne |
 **DSC 259R** Final Project
 
@@ -19,7 +20,7 @@ The dataset contains **24,830 team-level observations**, where each row represen
 > - **`firstblood`** — Indicates whether a team secured the first kill.  
 > - **`golddiffat10`** — Gold difference at 10 minutes.  
 > - **`killsat10`** — Kills secured at 10 minutes.  
-> - **`side`** — Blue or Red side.
+> - **`side`** — Blue or Red team during match.
 
 ---
 
@@ -106,10 +107,10 @@ This plot shows the relationship between **early objective control** and match o
 
 ## Grouped Analysis
 
-The following grouped table summarizes win rates based on early objective control.
+The following grouped table summarizes win rates based on early objective control and game patch version.
 
 
-|  patch |       0 |       1 |
+|  patch |       no |       yes |
 |-------:|--------:|--------:|
 |   12.01 | 0.236559 | 0.558566 |
 |   12.02 | 0.363328 | 0.559322 |
@@ -134,6 +135,7 @@ The following grouped table summarizes win rates based on early objective contro
 |   12.21 | 0.225806 | 0.550296 |
 |   12.23 | 0.5      | 0.5      |
 
+Note: **"Yes"** correlates to early objective obtained during winning match, **"No"** correlates to early objective NOT obtained during winning match.
 
 This grouped summary reinforces the trend observed in the visualization. Teams that secure early objectives win a substantially larger proportion of matches compared to teams that do not, suggesting that early objective control may be an important indicator of overall match success.
 
@@ -378,10 +380,9 @@ The evaluation metric used was **test accuracy**, since the prediction task is b
 - **Alternative Hypothesis (H₁):** The model is not fair with respect to early objective control. The model’s test accuracy differs between Group X and Group Y.
 
 - **Test statistic:** Difference in test accuracy  
-  \[
-  \text{Accuracy(Group X)} - \text{Accuracy(Group Y)}
-  \]
-- **Significance level:** \(\alpha = 0.05\)
+  **Accuracy(Group X) − Accuracy(Group Y)**
+
+- **Significance level:** α = 0.05
 
 A **permutation test** was performed by randomly shuffling group labels (X/Y) while keeping the model predictions fixed, then recomputing the accuracy difference to form an empirical null distribution.
 
@@ -390,13 +391,11 @@ A **permutation test** was performed by randomly shuffling group labels (X/Y) wh
 ### Results
 
 | Metric | Value |
-|---|---:|
-| Accuracy (Early objective secured) | 0.680 |
-| Accuracy (No early objective) | 0.659 |
-| Observed accuracy difference (Secured − Not) | 0.0215 |
-| Difference (percentage points) | 2.15 pp |
-| Permutation test p-value | 0.0865 |
-| Decision (α = 0.05) | Fail to reject H₀ |
+|------|------|
+| Accuracy (Early Objective Secured) | 0.680 |
+| Accuracy (No Early Objective) | 0.659 |
+| Observed Difference | 0.0215 |
+| Permutation p-value | 0.0865 |
 
 The model achieves slightly higher accuracy when early objectives are secured (0.680) compared to when they are not (0.659), producing an observed difference of 0.0215.
 
