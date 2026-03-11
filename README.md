@@ -52,7 +52,7 @@ After cleaning and feature engineering, the dataset contains **24,830 rows**, wh
 
 The following table shows the first few rows of the cleaned dataset used in the analysis.
 
-<div style="display:flex; justify-content:center;">
+<div style="overflow-x:auto; display:flex; justify-content:center;">
 
 |  result | side   |   firstblood |   firstdragon |   firstherald |   firsttower |   void_grubs |   early_obj_cntrl |   golddiffat10 |   killsat10 |
 |--------:|:-------|-------------:|--------------:|--------------:|-------------:|-------------:|------------------:|---------------:|------------:|
